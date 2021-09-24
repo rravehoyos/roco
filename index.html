@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mi primera página</title>
+	<style>
+		.hola{
+			position: absolute;
+			width: 300px;
+			height: 100px;
+			background: red;
+			top:0px;
+			left: 0px;
+		}
+		.texto{
+			position: absolute;
+			width: 600px;
+			background: red;
+			top:200px;
+			left:600px;
+			font-size: 80px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left:20px ;
+			box-sizing: border-box;
+		}
+		.dife{
+			font-size: 30px;
+			color: white;
+		}
+		.soni{
+			position: absolute;
+			top: 300px;
+		}
+	</style>
+</head>
+<body>
+<div id="respu" class="texto"> hola a todos </div>
+<div class="hola" onclick="agregar()">
+	<form>
+		<input type="text" id="resultado">
+		<input type="text" id="resultado1">
+	</form>
+
+</div>
+<audio src="hola.mp3" controls class="soni" id="sonidoso" loop></audio>
+	<script>
+		function agregar(){
+		sonidoso.play();
+		hola=resultado.value;
+		hola1=resultado1.value;
+		nuevot="<div class='dife'>"+hola+" "+hola1+"</div> ";
+		conte=respu.innerHTML;
+		conte= conte+nuevot;
+		respu.innerHTML=conte;
+		console.log(conte);
+		}
+	
+	</script>
+	
+</body>
+</html>
